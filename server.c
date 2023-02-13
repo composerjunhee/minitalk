@@ -6,7 +6,7 @@
 /*   By: junheeki <junheeki@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 14:25:56 by junheeki          #+#    #+#             */
-/*   Updated: 2023/02/13 17:29:56 by junheeki         ###   ########.fr       */
+/*   Updated: 2023/02/13 18:18:07 by junheeki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,6 @@ int main(int argc, char *argv[])
 	ft_putchar_fd('\n', 1);
 	sa.sa_sigaction = action;
 	sa.sa_flags = SA_SIGINFO;
-
+	asdfa
 	return 0;
 }
