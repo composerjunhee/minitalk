@@ -6,7 +6,7 @@
 /*   By: junheeki <junheeki@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 14:25:56 by junheeki          #+#    #+#             */
-/*   Updated: 2023/02/14 16:08:44 by junheeki         ###   ########.fr       */
+/*   Updated: 2023/02/14 16:17:54 by junheeki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ int	main(void)
 {
 	struct sigaction	sa;
 
+	ft_putstr_fd("Hello World, You are Ready. Here Is PID.\n", 1);
 	ft_putstr_fd("Server PID: ", 1);
 	ft_putnbr_fd(getpid(), 1);
 	ft_putchar_fd('\n', 1);
