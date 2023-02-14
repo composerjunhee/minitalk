@@ -6,7 +6,7 @@
 /*   By: junheeki <junheeki@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 14:25:56 by junheeki          #+#    #+#             */
-/*   Updated: 2023/02/13 18:46:14 by junheeki         ###   ########.fr       */
+/*   Updated: 2023/02/14 14:31:38 by junheeki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,10 @@ static void	action(int sig)
 
 static void	mt_kill(int pid, char *str)
 {
-	int	i;
+	int		i;
 	char	c;
 
-	while(*str)
+	while (*str)
 	{
 		i = 8;
 		c = *str++;
