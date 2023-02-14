@@ -6,7 +6,7 @@
 /*   By: junheeki <junheeki@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 14:25:56 by junheeki          #+#    #+#             */
-/*   Updated: 2023/02/14 14:31:38 by junheeki         ###   ########.fr       */
+/*   Updated: 2023/02/14 16:08:43 by junheeki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+#include <sys/types.h>
+#include <signal.h>
+#include "libft/libft.h"
 
 static void	action(int sig)
 {
@@ -58,10 +61,10 @@ static void	mt_kill(int pid, char *str)
 
 int	main(int argc, char **argv)
 {
-	if (argv != 3 || !ft_strlen(argv[2]))
+	if (argc != 3 || !ft_strlen(argv[2]))
 		return (1);
 	ft_putstr_fd("Sent	: ", 1);
-	ft_putnbr_fd(ft_strlen(argv[2], 1));
+	ft_putnbr_fd(ft_strlen(argv[2]), 1);
 	ft_putchar_fd('\n', 1);
 	ft_putstr_fd("Received: ", 1);
 	signal(SIGUSR1, action);
