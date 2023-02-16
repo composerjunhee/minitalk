@@ -6,7 +6,7 @@
 /*   By: junheeki <junheeki@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 14:25:56 by junheeki          #+#    #+#             */
-/*   Updated: 2023/02/14 16:08:43 by junheeki         ###   ########.fr       */
+/*   Updated: 2023/02/16 18:56:40 by junheeki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,7 @@
 
 static void	action(int sig)
 {
-	static int	received;
-
-	received = 0;
+	static int	received = 0;
 	if (sig == SIGUSR1)
 		++received;
 	else
