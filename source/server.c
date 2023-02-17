@@ -6,13 +6,11 @@
 /*   By: junheeki <junheeki@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 14:25:56 by junheeki          #+#    #+#             */
-/*   Updated: 2023/02/14 16:17:54 by junheeki         ###   ########.fr       */
+/*   Updated: 2023/02/17 11:14:14 by junheeki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <signal.h>
-#include <unistd.h>
-#include "libft/libft.h"
+#include "../include/minitalk.h"
 
 static void	action(int signo, siginfo_t *siginfo, void *context)
 {
