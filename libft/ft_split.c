@@ -6,7 +6,7 @@
 /*   By: junheeki <junheeki@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 12:37:00 by junheeki          #+#    #+#             */
-/*   Updated: 2022/11/18 14:25:35 by junheeki         ###   ########.fr       */
+/*   Updated: 2023/02/18 14:02:13 by junheeki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,7 +96,6 @@ char	**ft_split(char const *s, char c)
 {
 	char	**ret;
 	size_t	row;
-	size_t	i;
 
 	if (!s)
 		return (NULL);
@@ -104,7 +103,6 @@ char	**ft_split(char const *s, char c)
 	ret = (char **)malloc(sizeof(char *) * (row + 1));
 	if (!ret)
 		return (NULL);
-	i = 0;
 	saverr(s, c, ret, row);
 	return (ret);
 }
