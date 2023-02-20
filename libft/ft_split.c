@@ -6,7 +6,7 @@
 /*   By: junheeki <junheeki@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 12:37:00 by junheeki          #+#    #+#             */
-/*   Updated: 2023/02/20 15:31:30 by junheeki         ###   ########.fr       */
+/*   Updated: 2023/02/20 15:35:15 by junheeki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,6 +96,7 @@ char	**ft_split(char const *s, char c)
 {
 	char	**ret;
 	size_t	row;
+
 
 	if (!s)
 		return (NULL);
