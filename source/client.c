@@ -6,7 +6,7 @@
 /*   By: junheeki <junheeki@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 14:25:56 by junheeki          #+#    #+#             */
-/*   Updated: 2023/02/17 11:16:41 by junheeki         ###   ########.fr       */
+/*   Updated: 2023/02/21 00:18:19 by junheeki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,11 @@ int	main(int argc, char **argv)
 {
 	if (argc != 3 || !ft_strlen(argv[2]))
 		return (1);
+	if (ft_atoi(argv[1]) == 0)
+	{
+		ft_putstr_fd("Error: Server PID cannot be 0.\n", 2);
+		return(1);
+	}
 	ft_putstr_fd("Sent	: ", 1);
 	ft_putnbr_fd(ft_strlen(argv[2]), 1);
 	ft_putchar_fd('\n', 1);
