@@ -6,7 +6,7 @@
 /*   By: junheeki <junheeki@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 14:25:56 by junheeki          #+#    #+#             */
-/*   Updated: 2023/02/21 00:18:19 by junheeki         ###   ########.fr       */
+/*   Updated: 2023/02/21 14:20:28 by junheeki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static void	action(int sig)
 	}
 }
 
-static void	mt_kill(int pid, char *str)
+static void	message_kill(int pid, char *str)
 {
 	int		i;
 	char	c;
@@ -67,7 +67,7 @@ int	main(int argc, char **argv)
 	ft_putstr_fd("Received: ", 1);
 	signal(SIGUSR1, action);
 	signal(SIGUSR2, action);
-	mt_kill(ft_atoi(argv[1]), argv[2]);
+	message_kill(ft_atoi(argv[1]), argv[2]);
 	while (1)
 		pause();
 	return (0);
