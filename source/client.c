@@ -6,7 +6,7 @@
 /*   By: junheeki <junheeki@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 14:25:56 by junheeki          #+#    #+#             */
-/*   Updated: 2023/02/21 14:20:28 by junheeki         ###   ########.fr       */
+/*   Updated: 2023/02/22 14:16:46 by junheeki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,14 +41,14 @@ static void	message_kill(int pid, char *str)
 				kill(pid, SIGUSR2);
 			else
 				kill(pid, SIGUSR1);
-			usleep(100);
+			usleep(50);
 		}
 	}
 	i = 8;
 	while (i--)
 	{
 		kill(pid, SIGUSR1);
-		usleep(100);
+		usleep(50);
 	}
 }
 
@@ -59,12 +59,12 @@ int	main(int argc, char **argv)
 	if (ft_atoi(argv[1]) == 0)
 	{
 		ft_putstr_fd("Error: Server PID cannot be 0.\n", 2);
-		return(1);
+		return (1);
 	}
-	ft_putstr_fd("Sent	: ", 1);
+	ft_putstr_fd("Client Sent	: ", 1);
 	ft_putnbr_fd(ft_strlen(argv[2]), 1);
 	ft_putchar_fd('\n', 1);
-	ft_putstr_fd("Received: ", 1);
+	ft_putstr_fd("Server Received: ", 1);
 	signal(SIGUSR1, action);
 	signal(SIGUSR2, action);
 	message_kill(ft_atoi(argv[1]), argv[2]);
